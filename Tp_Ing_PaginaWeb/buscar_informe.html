@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Informes - Sistema Laboratorio</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <nav class="top-bar-nav">
+                <ul>
+                    <li><a href="#">Usuario: Administración</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="index.html">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-header">
+            <div class="logo-placeholder">
+                <img src="uader.png" alt="Logo del Laboratorio" style="height: 60px;">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cargar_informe.html">Cargar Informe</a></li>
+                    <li><a href="buscar_informe.html">Buscar Informes</a></li>
+                    <li><a href="#" class="nav-button">Mi Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <h2>Pantalla de Búsqueda de Informes</h2> <form action="#" method="get">
+                <fieldset>
+                    <legend>Filtros de Búsqueda</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="num_informe">N° de Informe</label>
+                            <input type="text" id="num_informe" name="num_informe">
+                        </div>
+                        <div class="form-group">
+                            <label for="dni_paciente">DNI Paciente</label>
+                            <input type="text" id="dni_paciente" name="dni_paciente">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado">
+                                <option value="">Todos</option>
+                                <option value="borrador">Borrador</option>
+                                <option value="revision">En Revisión</option>
+                                <option value="publicado">Publicado</option>
+                                <option value="entregado">Entregado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha_desde">Fecha (Desde)</label>
+                            <input type="date" id="fecha_desde" name="fecha_desde">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-buttons">
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+
+            <hr>
+            <h3>Resultados de Búsqueda</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>N° Informe</th>
+                        <th>Paciente</th>
+                        <th>Profesional Solicitante</th>
+                        <th>Fecha Recepción</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001-10234</td>
+                        <td>Juan Perez (38.123.456)</td>
+                        <td>Dr. Juan Domingo Peron</td>
+                        <td>25/10/2025</td>
+                        <td>Publicado</td>
+                        <td><a href="ver_informe.html">Ver Informe</a></td>
+                    </tr>
+                    <tr>
+                        <td>001-10235</td>
+                        <td>Irribarren Axel (40.987.654)</td>
+                        <td>Dra. Ana Gomez</td>
+                        <td>26/10/2025</td>
+                        <td>En Revisión</td>
+                        <td><a href="#">Editar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-column">
+                <h3>Laboratorio UADER</h3>
+                <p>Facultad de Ciencia y Tecnología</p>
+                <p>Ingeniería de Software I</p>
+                <p>Comisión 2 - Viernes</p>
+                <p>Año: 2025</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cargar_informe.html">Cargar Informe</a></li>
+                    <li><a href="buscar_informe.html">Buscar Informes</a></li>
+                    <li><a href="#">Mi Perfil</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto Ficticio</h3>
+                <p>info@labouader.com</p>
+                <p>+54 (343) 420-1234</p>
+                <p>Km 10,5, RP11, E3100 Oro Verde</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sistema de Laboratorio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
