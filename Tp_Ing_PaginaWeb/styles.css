@@ -1,28 +1,45 @@
+
+:root {
+    --c-light-cyan: #E1EFF0;
+    --c-cream: #ECE5C7;
+    --c-taupe: #CDC2AE;
+    --c-teal: #116A7B;
+    --c-dark-gray: #333333;
+    --c-white: #ffffff;
+}
+
+/* ===================================================================
+   Estilos Base y Mobile First (Predeterminados)
+   =================================================================== */
+
 body {
     font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--c-dark-gray);
+    background-color: var(--c-cream); /* Fondo principal de la paleta */
+    line-height: 1.6;
 }
 
-.container {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.img-logo{
+    height: 200px;
+    width: 200px;
 }
 
-h1, h2, h3 {
-    color: #005a9c;
+/* Eliminamos el fondo de imagen borroso para un look más limpio */
+body::before {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+    color: var(--c-teal); /* Color de títulos de la paleta */
     margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 a {
-    color: #007bff;
+    color: var(--c-teal);
     text-decoration: none;
 }
 
@@ -30,184 +47,20 @@ a:hover {
     text-decoration: underline;
 }
 
-.main-menu {
-    list-style: none;
-    padding: 0;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.main-menu li {
-    margin-bottom: 15px;
-}
-
-.main-menu a {
-    display: block;
-    padding: 18px 25px;
-    background-color: #007bff;
-    color: #ffffff;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.main-menu a:hover {
-    background-color: #0056b3;
-    text-decoration: none;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-legend {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #005a9c;
-    padding: 0 10px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.form-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-button[type="submit"] {
-    background-color: #28a745;
-    color: white;
-}
-
-button[type="reset"] {
-    background-color: #dc3545;
-    color: white;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-thead {
-    background-color: #005a9c;
-    color: white;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.informe-container {
-    border: 2px solid #000;
-    padding: 25px;
-}
-
-.informe-header {
-    text-align: center;
-    border-bottom: 2px solid #000;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-.informe-header h1 {
-    margin: 0;
-}
-
-.informe-header p {
-    margin: 4px 0;
-    font-size: 0.9em;
-}
-
-.informe-maestro {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.informe-maestro div {
-    font-size: 0.95em;
-}
-
-.informe-maestro strong {
-    display: inline-block;
-    width: 150px;
-}
-
-.informe-detalle h3 {
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-}
-
-.informe-footer {
-    text-align: right;
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #555;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
-
+/* --- Header (Móvil) --- */
 header {
-    position: relative; 
+    position: relative;
     z-index: 10;
 }
 
 .top-bar {
-    background-color: #3a4a8a;
-    padding: 10px 40px;
-    text-align: right;
+    background-color: var(--c-taupe); /* Color neutro de la paleta */
+    padding: 10px 15px;
 }
 
 .top-bar-nav ul {
@@ -215,49 +68,34 @@ header {
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    flex-direction: column; /* Apilado en móvil */
+    align-items: center;
+    gap: 8px;
 }
 
 .top-bar-nav a {
-    color: #ffffff;
+    color: var(--c-dark-gray);
     font-size: 0.9em;
     font-weight: bold;
-    text-decoration: none;
     text-transform: uppercase;
-}
-
-.top-bar-nav a:hover {
-    text-decoration: underline;
 }
 
 .main-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Apilado en móvil */
     align-items: center;
-    padding: 20px 40px;
-    background-color: #ffffff;
+    padding: 15px;
+    background-color: var(--c-light-cyan); /* Color de acento de la paleta */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 15px;
 }
 
 .logo-placeholder {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    outline: none;
-    width: auto;
-    height: auto;
+    height: 50px; /* Ajuste para móvil */
 }
-
 .logo-placeholder img {
-    max-width: 180px;
-    max-height: 60px;
+    height: 100%;
     width: auto;
-    height: auto;
-    object-fit: contain;
-    vertical-align: middle; 
 }
 
 .main-nav ul {
@@ -265,113 +103,419 @@ header {
     padding: 0;
     list-style: none;
     display: flex;
+    flex-direction: column; /* Apilado en móvil */
     align-items: center;
-    gap: 30px;
+    gap: 15px;
+    width: 100%;
 }
 
 .main-nav a {
     font-size: 1.1em;
     font-weight: 600;
-    color: #333;
-    text-decoration: none;
-}
-
-.main-nav a:hover {
-    color: #005a9c;
+    color: var(--c-teal);
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-button {
-    background-color: #e64c5c;
-    color: #ffffff !important;
+    
+    color: var(--c-teal);
     font-weight: bold;
     padding: 12px 20px;
     border-radius: 30px;
     transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box; /* Para que el padding no rompa el width */
 }
-
 .nav-button:hover {
-    background-color: #d13a4a;
+    color: white; /* Un poco más oscuro */
+    text-decoration: none;
 }
 
-.header-link {
-    display: none;
+/* --- Contenido Principal (Móvil) --- */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--c-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* --- Menú Principal (index.html) --- */
+.main-menu {
+    list-style: none;
+    padding: 0;
+}
+.main-menu li {
+    margin-bottom: 15px;
+}
+.main-menu a {
+    display: block;
+    padding: 18px 25px;
+    background-color: var(--c-teal);
+    color: var(--c-white);
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.main-menu a:hover {
+    background-color: #0d5a6a;
+    text-decoration: none;
+}
+
+/* --- Formularios (Móvil) --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+fieldset {
+    border: 1px solid var(--c-taupe);
+    border-radius: 8px;
+    padding: 15px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid var(--c-taupe);
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fdfdfd;
+}
+.form-buttons {
+    display: flex;
+    flex-direction: column; /* Botones apilados en móvil */
+    gap: 10px;
+    margin-top: 10px;
+}
+button, .btn-login {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+button[type="submit"], .btn-login {
+    background-color: var(--c-teal);
+    color: white;
+}
+button[type="submit"]:hover, .btn-login:hover {
+    background-color: #0d5a6a;
+    text-decoration: none;
+}
+button[type="reset"] {
+    background-color: #b33939;
+    color: white;
+}
+
+/* --- Tablas (Móvil) --- */
+/* En móvil, hacemos la tabla "scrollable" horizontalmente */
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid var(--c-taupe);
+    text-align: left;
+}
+thead {
+    background-color: var(--c-teal);
+    color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* --- Footer (Móvil) --- */
 footer {
-    background-color: #3a4a8a;
-    color: #f4f4f4;
-    padding-top: 30px;
+    background-color: var(--c-teal);
+    color: var(--c-light-cyan);
+    padding: 30px 0 10px 0;
     margin-top: 40px;
 }
-
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; 
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
+    flex-direction: column; /* Apilado en móvil */
+    padding: 0 20px;
+    gap: 20px;
 }
-
 .footer-column {
-    flex-basis: 23%;
-    min-width: 220px;
-    margin-bottom: 25px;
+    min-width: 100%;
 }
-
 .footer-column h3 {
-    color: #ffffff; 
+    color: var(--c-white);
     margin-bottom: 15px;
-    border-bottom: 2px solid #5a6aac; 
+    border-bottom: 2px solid var(--c-light-cyan);
     padding-bottom: 5px;
 }
-
 .footer-column p,
 .footer-column li {
     font-size: 0.95em;
     line-height: 1.7;
 }
-
 .footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .footer-column a {
-    color: #f4f4f4;
-    text-decoration: none;
+    color: var(--c-white);
 }
-
-.footer-column a:hover {
-    text-decoration: underline;
-}
-
 .footer-bottom {
     text-align: center;
     padding: 15px;
-    border-top: 1px solid #5a6aac; 
-    margin-top: 15px;
+    border-top: 1px solid #0d5a6a;
+    margin-top: 20px;
 }
 
-.footer-bottom p {
-    margin: 0;
+/* --- Página de Login (Móvil) --- */
+.login-header {
+    text-align: center;
+    padding: 20px;
+    background: var(--c-light-cyan);
+}
+.login-header h1 {
+    margin: 10px 0 0 0;
+    font-size: 1.5em;
+}
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    background: var(--c-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login-container p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #555;
+}
+.login-container .form-buttons {
+    margin-top: 10px;
+}
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
     font-size: 0.9em;
 }
 
-body::before {
-    content: "";
-    background-image: url('fondo.jpg');
-    background-color: #f4f7f6; 
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    filter: blur(2px);
-    opacity: 0.4;
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+/* --- Estilos Informe (ver_informe.html - Móvil) --- */
+/* Ajustado para parecerse a la plantilla */
+.informe-container {
+    border: 2px solid var(--c-dark-gray);
+    padding: 15px;
+    background: var(--c-white);
+}
+.informe-header {
+    display: flex; /* Activamos flexbox */
+    flex-direction: column; /* Apilado en móvil */
+    align-items: center; /* Centrado en móvil */
+    text-align: center;
+    border-bottom: 2px solid var(--c-dark-gray);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.informe-logo-img {
+    max-width: 80px; /* Un tamaño discreto en móvil */
+    margin-bottom: 15px;
+}
+
+.informe-header h1 {
+    margin: 0;
+    font-size: 1.3em;
+}
+.informe-header p {
+    margin: 4px 0;
+    font-size: 0.85em;
+}
+
+.informe-maestro {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+    gap: 8px;
+    border-bottom: 1px solid var(--c-taupe);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+.informe-maestro strong {
+    display: inline-block;
+    width: 120px; /* Ancho fijo para alineación */
+    color: var(--c-dark-gray);
+}
+.informe-detalle h3 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+.informe-footer {
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    text-align: center;
+    gap: 5px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 2px solid var(--c-dark-gray);
+    padding-top: 10px;
+}
+
+
+/* ===================================================================
+   Estilos de Escritorio (Tablet y más grande)
+   =================================================================== */
+
+@media (min-width: 768px) {
+    .uader-logo{
+    height: 80px !important;
+    width: 80px !important;
+    }
+    /* --- Header (Escritorio) --- */
+    .top-bar {
+        padding: 10px 40px;
+    }
+    .top-bar-nav ul {
+        flex-direction: row; /* Horizontal en escritorio */
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .main-header {
+        flex-direction: row; /* Horizontal en escritorio */
+        justify-content: space-between;
+        padding: 20px 40px;
+        gap: 20px;
+    }
+    .logo-placeholder {
+        height: 70px;
+    }
+    .main-nav ul {
+        flex-direction: row; /* Horizontal en escritorio */
+        gap: 30px;
+        width: auto;
+    }
+    .main-nav a {
+        padding: 0;
+        width: auto;
+    }
+    .nav-button {
+        width: auto;
+    }
+
+    /* --- Contenido Principal (Escritorio) --- */
+    .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+    }
+
+    /* --- Formularios (Escritorio) --- */
+    .form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Rejilla flexible */
+    }
+    .form-buttons {
+        flex-direction: row; /* Botones en línea */
+        justify-content: flex-end;
+    }
+
+    /* --- Tablas (Escritorio) --- */
+    /* Devolvemos la tabla a su estado normal */
+    table {
+        display: table;
+        width: 100%;
+        overflow-x: visible;
+        white-space: normal;
+    }
+    .informe-logo-img {
+    max-width: 100px; /* Un poco más grande en escritorio */
+    margin-bottom: 0; /* Quitamos el margen inferior */
+    }
+    .informe-header-info {
+    flex: 1; /* Ocupa el resto del espacio disponible */
+    }
+    /* --- Footer (Escritorio) --- */
+    .footer-content {
+        flex-direction: row; /* Horizontal en escritorio */
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    .footer-column {
+        flex-basis: 23%; /* 4 columnas */
+        min-width: 220px;
+    }
+
+    /* --- Página de Login (Escritorio) --- */
+    .login-container {
+        margin: 50px auto;
+        padding: 40px;
+    }
+    .login-header h1 {
+        font-size: 2em;
+    }
+
+    /* --- Estilos Informe (ver_informe.html - Escritorio) --- */
+    .informe-container {
+        padding: 25px;
+    }
+    .informe-header {
+    flex-direction: row; /* Horizontal en escritorio */
+    align-items: flex-start; /* Alinear arriba */
+    text-align: left; /* Texto alineado a la izquierda */
+    gap: 20px; /* Espacio entre logo e info */
+}
+    .informe-header h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    .informe-header p {
+        font-size: 0.9em;
+    }
+    .informe-maestro {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en escritorio */
+        gap: 10px;
+    }
+    .informe-maestro strong {
+        width: 160px;
+    }
+    .informe-footer {
+        flex-direction: row; /* Horizontal en escritorio */
+        justify-content: space-between;
+        text-align: right;
+    }
 }

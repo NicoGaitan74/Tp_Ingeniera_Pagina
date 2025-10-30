@@ -14,13 +14,13 @@
                 <ul>
                     <li><a href="#">Usuario: Administración</a></li>
                     <li><a href="#">Ayuda</a></li>
-                    <li><a href="index.html">Cerrar Sesión</a></li>
+                    <li><a href="login.html">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </div>
         <div class="main-header">
             <div class="logo-placeholder">
-                <img src="uader.png" alt="Logo del Laboratorio" style="height: 60px;">
+                <img class="uader-logo" src="uader.png" alt="Logo del Laboratorio" style="height: 60px;">
             </div>
             <nav class="main-nav">
                 <ul>
@@ -46,11 +46,11 @@
                         </div>
                         <div class="form-group">
                             <label for="paciente">Paciente</label>
-                            <input type="text" id="paciente" name="paciente" value="Juan Perez" disabled>
+                            <input type="text" id="paciente" name="paciente" placeholder="Juan Perez" >
                         </div>
                         <div class="form-group">
                             <label for="obra_social">Obra Social</label>
-                            <input type="text" id="obra_social" name="obra_social" value="OSDE" disabled>
+                            <input type="text" id="obra_social" name="obra_social" placeholder="OSDE" >
                         </div>
                     </div>
                 </fieldset>
@@ -65,8 +65,10 @@
                         <div class="form-group">
                             <label for="prof_solicitante">Profesional Solicitante</label>
                             <select id="prof_solicitante" name="prof_solicitante">
-                                <option value="1">Dr. Juan Domingo Peron (Cardiólogo)</option>
-                                <option value="2">Dra. Ana Gomez (Clínica)</option>
+                                <option value="1">Dr. Gaitán Nicolás (Cardiólogo)</option>
+                                <option value="2">Dr. Montórfano Juan (Clínica)</option>
+                                <option value="2">Dr. Irribarren Axel (Clínica)</option>
+                                <option value="2">Dr. Zufiaurre Juan (Clínica)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -129,7 +131,7 @@
             </div>
 
             <div class="footer-column">
-                <h3>Contacto Ficticio</h3>
+                <h3>Contacto</h3>
                 <p>info@labouader.com</p>
                 <p>+54 (343) 420-1234</p>
                 <p>Km 10,5, RP11, E3100 Oro Verde</p>
