@@ -12,6 +12,7 @@
 
 body {
     font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
     margin: 0;
     padding: 0;
     color: var(--c-dark-gray);
@@ -216,7 +217,7 @@ button, .btn-login {
     text-align: center;
     font-weight: bold;
 }
-button[type="submit"], .btn-login {
+button[type="button"], .btn-login {
     background-color: var(--c-teal);
     color: white;
 }
