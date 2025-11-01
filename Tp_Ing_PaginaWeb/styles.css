@@ -8,16 +8,14 @@
     --c-white: #ffffff;
 }
 
-/* ===================================================================
-   Estilos Base y Mobile First (Predeterminados)
-   =================================================================== */
+/*Mobile First*/
 
 body {
     font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: var(--c-dark-gray);
-    background-color: var(--c-cream); /* Fondo principal de la paleta */
+    background-color: var(--c-cream);
     line-height: 1.6;
 }
 
@@ -26,13 +24,13 @@ body {
     width: 200px;
 }
 
-/* Eliminamos el fondo de imagen borroso para un look más limpio */
+
 body::before {
     display: none;
 }
 
 h1, h2, h3, h4, h5, h6, legend {
-    color: var(--c-teal); /* Color de títulos de la paleta */
+    color: var(--c-teal);
     margin-top: 0;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -52,14 +50,14 @@ img {
     height: auto;
 }
 
-/* --- Header (Móvil) --- */
+/* --- Header --- */
 header {
     position: relative;
     z-index: 10;
 }
 
 .top-bar {
-    background-color: var(--c-taupe); /* Color neutro de la paleta */
+    background-color: var(--c-taupe);
     padding: 10px 15px;
 }
 
@@ -68,7 +66,7 @@ header {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column;
     align-items: center;
     gap: 8px;
 }
@@ -82,16 +80,16 @@ header {
 
 .main-header {
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column; 
     align-items: center;
     padding: 15px;
-    background-color: var(--c-light-cyan); /* Color de acento de la paleta */
+    background-color: var(--c-light-cyan);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     gap: 15px;
 }
 
 .logo-placeholder {
-    height: 50px; /* Ajuste para móvil */
+    height: 50px; 
 }
 .logo-placeholder img {
     height: 100%;
@@ -103,7 +101,7 @@ header {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column; 
     align-items: center;
     gap: 15px;
     width: 100%;
@@ -127,14 +125,14 @@ header {
     border-radius: 30px;
     transition: background-color 0.3s ease;
     width: 100%;
-    box-sizing: border-box; /* Para que el padding no rompa el width */
+    box-sizing: border-box; 
 }
 .nav-button:hover {
-    color: white; /* Un poco más oscuro */
+    color: white; 
     text-decoration: none;
 }
 
-/* --- Contenido Principal (Móvil) --- */
+/* --- Contenido Principal --- */
 .container {
     position: relative;
     z-index: 1;
@@ -146,7 +144,7 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Menú Principal (index.html) --- */
+/* --- Menú Principal --- */
 .main-menu {
     list-style: none;
     padding: 0;
@@ -170,7 +168,7 @@ header {
     text-decoration: none;
 }
 
-/* --- Formularios (Móvil) --- */
+/* --- Formularios --- */
 form {
     display: flex;
     flex-direction: column;
@@ -183,7 +181,7 @@ fieldset {
 }
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna en móvil */
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 .form-group {
@@ -205,7 +203,7 @@ fieldset {
 }
 .form-buttons {
     display: flex;
-    flex-direction: column; /* Botones apilados en móvil */
+    flex-direction: column;
     gap: 10px;
     margin-top: 10px;
 }
@@ -231,8 +229,7 @@ button[type="reset"] {
     color: white;
 }
 
-/* --- Tablas (Móvil) --- */
-/* En móvil, hacemos la tabla "scrollable" horizontalmente */
+/* --- Tablas --- */
 table {
     display: block;
     width: 100%;
@@ -254,7 +251,7 @@ tbody tr:nth-child(even) {
     background-color: #f8f8f8;
 }
 
-/* --- Footer (Móvil) --- */
+/* --- Footer --- */
 footer {
     background-color: var(--c-teal);
     color: var(--c-light-cyan);
@@ -263,7 +260,7 @@ footer {
 }
 .footer-content {
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column;
     padding: 0 20px;
     gap: 20px;
 }
@@ -296,7 +293,7 @@ footer {
     margin-top: 20px;
 }
 
-/* --- Página de Login (Móvil) --- */
+/* --- Login --- */
 .login-header {
     text-align: center;
     padding: 20px;
@@ -333,24 +330,23 @@ footer {
     font-size: 0.9em;
 }
 
-/* --- Estilos Informe (ver_informe.html - Móvil) --- */
-/* Ajustado para parecerse a la plantilla */
+/* --- Estilos Informe  --- */
 .informe-container {
     border: 2px solid var(--c-dark-gray);
     padding: 15px;
     background: var(--c-white);
 }
 .informe-header {
-    display: flex; /* Activamos flexbox */
-    flex-direction: column; /* Apilado en móvil */
-    align-items: center; /* Centrado en móvil */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     text-align: center;
     border-bottom: 2px solid var(--c-dark-gray);
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
 .informe-logo-img {
-    max-width: 80px; /* Un tamaño discreto en móvil */
+    max-width: 80px;
     margin-bottom: 15px;
 }
 
@@ -365,7 +361,7 @@ footer {
 
 .informe-maestro {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna en móvil */
+    grid-template-columns: 1fr;
     gap: 8px;
     border-bottom: 1px solid var(--c-taupe);
     padding-bottom: 15px;
@@ -374,7 +370,7 @@ footer {
 }
 .informe-maestro strong {
     display: inline-block;
-    width: 120px; /* Ancho fijo para alineación */
+    width: 120px; 
     color: var(--c-dark-gray);
 }
 .informe-detalle h3 {
@@ -383,7 +379,7 @@ footer {
 }
 .informe-footer {
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column;
     text-align: center;
     gap: 5px;
     margin-top: 30px;
@@ -394,27 +390,25 @@ footer {
 }
 
 
-/* ===================================================================
-   Estilos de Escritorio (Tablet y más grande)
-   =================================================================== */
+/* Desktop */
 
 @media (min-width: 768px) {
     .uader-logo{
     height: 80px !important;
     width: 80px !important;
     }
-    /* --- Header (Escritorio) --- */
+    /* --- Header --- */
     .top-bar {
         padding: 10px 40px;
     }
     .top-bar-nav ul {
-        flex-direction: row; /* Horizontal en escritorio */
+        flex-direction: row;
         justify-content: flex-end;
         gap: 20px;
     }
 
     .main-header {
-        flex-direction: row; /* Horizontal en escritorio */
+        flex-direction: row;
         justify-content: space-between;
         padding: 20px 40px;
         gap: 20px;
@@ -423,7 +417,7 @@ footer {
         height: 70px;
     }
     .main-nav ul {
-        flex-direction: row; /* Horizontal en escritorio */
+        flex-direction: row;
         gap: 30px;
         width: auto;
     }
@@ -435,24 +429,23 @@ footer {
         width: auto;
     }
 
-    /* --- Contenido Principal (Escritorio) --- */
+    /* --- Contenedor Principal--- */
     .container {
         max-width: 900px;
         margin: 30px auto;
         padding: 30px;
     }
 
-    /* --- Formularios (Escritorio) --- */
+    /* --- Formularios --- */
     .form-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Rejilla flexible */
     }
     .form-buttons {
-        flex-direction: row; /* Botones en línea */
+        flex-direction: row;
         justify-content: flex-end;
     }
 
-    /* --- Tablas (Escritorio) --- */
-    /* Devolvemos la tabla a su estado normal */
+    /* --- Tablas --- */
     table {
         display: table;
         width: 100%;
@@ -460,15 +453,15 @@ footer {
         white-space: normal;
     }
     .informe-logo-img {
-    max-width: 100px; /* Un poco más grande en escritorio */
-    margin-bottom: 0; /* Quitamos el margen inferior */
+    max-width: 100px;
+    margin-bottom: 0; 
     }
     .informe-header-info {
-    flex: 1; /* Ocupa el resto del espacio disponible */
+    flex: 1; 
     }
-    /* --- Footer (Escritorio) --- */
+    /* --- Footer  --- */
     .footer-content {
-        flex-direction: row; /* Horizontal en escritorio */
+        flex-direction: row; 
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 1200px;
@@ -476,11 +469,11 @@ footer {
         padding: 0 40px;
     }
     .footer-column {
-        flex-basis: 23%; /* 4 columnas */
+        flex-basis: 23%; 
         min-width: 220px;
     }
 
-    /* --- Página de Login (Escritorio) --- */
+    /* --- Página de Login  --- */
     .login-container {
         margin: 50px auto;
         padding: 40px;
@@ -489,15 +482,15 @@ footer {
         font-size: 2em;
     }
 
-    /* --- Estilos Informe (ver_informe.html - Escritorio) --- */
+    /* --- Estilos Informe --- */
     .informe-container {
         padding: 25px;
     }
     .informe-header {
-    flex-direction: row; /* Horizontal en escritorio */
-    align-items: flex-start; /* Alinear arriba */
-    text-align: left; /* Texto alineado a la izquierda */
-    gap: 20px; /* Espacio entre logo e info */
+    flex-direction: row; 
+    align-items: flex-start; 
+    text-align: left; 
+    gap: 20px; 
 }
     .informe-header h1 {
         font-size: 1.8em;
@@ -507,14 +500,14 @@ footer {
         font-size: 0.9em;
     }
     .informe-maestro {
-        grid-template-columns: 1fr 1fr; /* 2 columnas en escritorio */
+        grid-template-columns: 1fr 1fr; 
         gap: 10px;
     }
     .informe-maestro strong {
         width: 160px;
     }
     .informe-footer {
-        flex-direction: row; /* Horizontal en escritorio */
+        flex-direction: row; 
         justify-content: space-between;
         text-align: right;
     }
